@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Travel Rec</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+            background-image: url("./images/background.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 32px;
+            background-color: #0f766e;
+        }
+
+        .navbar h1 {
+            color: white;
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        .contact {
+            max-width: 600px;
+            margin: 120px auto;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.45);
+            border-radius: 16px;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact input,
+        .contact textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .contact textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact button {
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            background-color: #14b8a6;
+            color: white;
+        }
+
+        .contact button:hover {
+            background-color: #0d9488;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h1>Travel Rec</h1>
+
+        <div class="nav-links">
+            <a href="./travel_recommendation.html">Home</a>
+            <a href="./about_us.html">About Us</a>
+            <a href="./contact_us.html">Contact Us</a>
+        </div>
+    </nav>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+</body>
+
+</html>

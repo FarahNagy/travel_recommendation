@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Recommendation</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+            background-image: url("./images/background.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* Navbar container */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 32px;
+            background-color: #0f766e;
+        }
+
+        /* Logo / Title */
+        .navbar h1 {
+            color: white;
+            margin: 0;
+            font-size: 22px;
+        }
+
+        /* Navigation links */
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Search section */
+        .search-bar {
+            display: flex;
+            gap: 8px;
+        }
+
+        .search-bar input {
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 8px 14px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .search-btn {
+            background-color: #14b8a6;
+            color: white;
+        }
+
+        .search-btn:hover {
+            background-color: #0d9488;
+        }
+
+        .reset-btn {
+            background-color: #f1f5f9;
+        }
+
+        .reset-btn:hover {
+            background-color: #e2e8f0;
+        }
+
+        /* Hero / Introduction section */
+        .hero {
+            max-width: 800px;
+            margin: 120px auto 0;
+            padding: 40px;
+            text-align: center;
+            color: white;
+
+            background-color: rgba(0, 0, 0, 0.45);
+            border-radius: 16px;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h1>Travel Rec</h1>
+
+        <div class="nav-links">
+            <a href="./travel_recommendation.html">Home</a>
+            <a href="./about_us.html">About Us</a>
+            <a href="./contact_us.html">Contact Us</a>
+        </div>
+
+        <div class="search-bar">
+            <input id="searchInput"type="text" placeholder="Search destinations...">
+            <button class="search-btn">Search</button>
+            <button class="reset-btn">Reset</button>
+        </div>
+    </nav>
+    <section class="hero">
+        <h2>Your Journey Starts Here</h2>
+        <p>
+            Travel Rec helps you discover destinations that match your mood, interests,
+            and travel style. From peaceful beaches to vibrant cities, we guide you
+            toward experiences you’ll never forget.
+        </p>
+    </section>
+    <script src="travel_recommendation.js"></script>
+
+</body>
+
+</html>
