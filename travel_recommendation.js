@@ -3,7 +3,7 @@ var beaches = [];
 var temples = [];
 
 fetch('./travel_recommendation_api.json')
-    .then(res => res.json())
+    .then(res => {if (!res.ok) throw new Error("Network response was not ok"); return res.json();})
     .then(data => {
         console.log(data)
         countries = data.countries;
