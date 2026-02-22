@@ -70,5 +70,10 @@ function reset() {
     document.getElementById('details').innerHTML = '';
 }
 
-searchBtn.addEventListener('click', search);
-clearbtn.addEventListener('click', reset)
+document.addEventListener('DOMContentLoaded', () => {
+    const searchBtn = document.getElementById('searchbtn');
+    const clearbtn = document.getElementById('clearbtn');
+
+    searchBtn.addEventListener('click', search);
+    clearbtn.addEventListener('click', reset);
+});
