@@ -1,9 +1,10 @@
 var countries = [];
 var beaches = [];
 var temples = [];
-
+const searchBtn = document.getElementById('searchbtn');
+const clearbtn = document.getElementById('clearbtn');
 fetch('./travel_recommendation_api.json')
-    .then(res => {if (!res.ok) throw new Error("Network response was not ok"); return res.json();})
+    .then(res => { if (!res.ok) throw new Error("Network response was not ok"); return res.json(); })
     .then(data => {
         console.log(data)
         countries = data.countries;
@@ -68,3 +69,6 @@ function search() {
 function reset() {
     document.getElementById('details').innerHTML = '';
 }
+
+searchBtn.addEventListener('click', search);
+clearbtn.addEventListener('click', reset)
