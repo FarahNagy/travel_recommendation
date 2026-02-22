@@ -13,10 +13,58 @@ fetch('./travel_recommendation_api.json')
 
         console.log("beaches: ", beaches);
     })
+    .catch(err => {
+        console.log(err);
+        console.log("cant fetch travel data");
+    })
 
 function search() {
     const searchInput = document.getElementById('searchInput').value;
-    if(searchInput.toLowerCase() === 'beach' || searchInput.toLowerCase() === 'beaches'){
-        
+    document.getElementById('searchInput').value = '';
+    var detailsDiv = document.getElementById('details');
+    let details = '';
+    if (searchInput.toLowerCase() === 'beach' || searchInput.toLowerCase() === 'beaches') {
+        for (const beach of beaches) {
+            details += `
+                <div class="card">
+                    <img src="${beach.imageUrl}" alt="${beach.name}">
+                    <h3>${beach.name}</h3>
+                    <p>${beach.description}</p>
+                </div>
+            `;
+        }
+
     }
+    else if (searchInput.toLowerCase() === 'temple' || searchInput.toLowerCase() === 'temples') {
+        for (const temple of temples) {
+            details += `
+                <div class="card">
+                    <img src="${temple.imageUrl}" alt="${temple.name}">
+                    <h3>${temple.name}</h3>
+                    <p>${temple.description}</p>
+                </div>
+            `;
+        }
+    } else if (searchInput.toLowerCase() === 'country' || searchInput.toLowerCase() === 'countries') {
+        for (const country of countries) {
+            var cities = country.cities;
+            for (const city of cities) {
+                details += `
+                <div class="card">
+                    <img src="${city.imageUrl}" alt="${city.name}">
+                    <h3>${city.name}</h3>
+                    <p>${city.description}</p>
+                </div>
+            `;
+            }
+
+        }
+    }
+    detailsDiv.innerHTML = details;
+
+}
+
+
+function reset() {
+    document.getElementById('details').innerHTML = '';
 }
